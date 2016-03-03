@@ -1,0 +1,72 @@
+//MYSQL Questions
+
+Question 1: SQL Query to find second highest salary of Employee
+
+    select MAX(Salary) from Employee WHERE Salary NOT IN (select MAX(Salary) from Employee );
+
+Question 2: SQL Query to find Max Salary from each department.
+
+    SELECT DeptID, MAX(Salary) FROM Employee  GROUP BY DeptID.
+
+Question 3 :  Print the Department Name as well
+
+    SELECT DepName, MAX(salary) from Employee e RIGHT JOIN Department d on d.Id = e.DepId GROUP BY DepName;
+
+Question 4 :  get the current date
+
+    SELECT GetDate();
+
+
+Question 5: Write an SQL Query to print the name of the distinct employee whose DOB is between 01/01/1960 to 31/12/1975.
+
+    SELECT DISTINCT EmpName FROM Employees WHERE DOB  BETWEEN ‘01/01/1960’ AND ‘31/12/1975’;
+
+
+
+
+// Oracle Questions
+
+Question 1: SQL Query to find second highest salary of Employee
+
+    SELECT MAX(Salary)
+    FROM Employee
+    WHERE Salary < (SELECT MAX(Salary) FROM Employee);
+
+
+
+Question 2: Query to display current date
+
+    SELECT TO_CHAR
+        (SYSDATE, 'MM-DD-YYYY HH24:MI:SS') "NOW"
+         FROM DUAL;
+
+
+
+Question 3: There is a table which contains two column Student and Marks, you need to find all the students, whose
+marks are greater than average marks i.e. list of above average students.
+
+            SELECT student, marks from table where marks > SELECT AVG(marks) from table)
+
+
+
+Question 4: How do you find all employees which are also manager? .
+
+            SELECT e.name, m.name FROM Employee e, Employee m WHERE e.mgr_id = m.emp_id;
+
+
+Question 5: The Employee table holds all employees including their managers. Every employee has an Id, and there is
+            also a column for the manager Id. Given the Employee table, write a SQL query that finds out employees
+            who earn more than their managers.
+
+            SELECT a.NAME FROM Employee a, Employee b
+            WHERE a.ManagerId = b.Id AND a.Salary > b.Salary;
+
+
+
+
+
+
+
+
+
+
