@@ -27,7 +27,7 @@ public class StackPlates {
 	public int pop() {
 		Stack<Integer> s = getLast();
 		if (s == null || s.isEmpty()) {
-			stacks.remove(s.size() - 1);
+			stacks.remove(s.size() - 1); // check this should be stacks.remove(s);
 			return 0;
 		}
 		int value = s.pop();

@@ -3,6 +3,8 @@ package com.sorting;
 /**
  * Created by Laks on 1/22/16.
  *
+ * Question asked in AOL. Design a deck of cards
+ *
  */
 public class Card {
 
@@ -22,10 +24,10 @@ public class Card {
         Rank(int value) {
             this.value = value;
         }
-        public int getValue(){
+        public int getValue() {
             return this.value;
         }
-        public int getValue(int i){
+        public int getValue(int i) {
             return this.value;
         }
         public static Rank getRank(int i) {

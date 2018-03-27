@@ -62,7 +62,7 @@ public class Calculator {
                 i++;
             } else if (s.charAt(i) == ')') {
                 String str = stack.pop();
-                stack.pop();
+                stack.pop(); //check this - not required
                 i++;
                 pushOrAddOrMinus(str, stack);
             } else if (s.charAt(i) == ' ') {

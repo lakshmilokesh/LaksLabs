@@ -25,6 +25,31 @@ public class AddLinkedList extends LinkedList{
 		Node finalNode = addLinkedList(headA, headB);
 		displayValues(finalNode);
 	}
+
+	//Better coding
+	public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+		ListNode dummyHead = new ListNode(0,null);
+		ListNode current = dummyHead;
+		int carry = 0;
+		while (l1 != null || l2 != null) {
+			int x = (l1 != null) ? l1.data : 0;
+			int y = (l2 != null) ? l2.data : 0;
+			int sum = x + y + carry;
+			carry = sum/10;
+
+			current.next = new ListNode(sum%10,null);
+			current = current.next;
+
+			if (l1 != null) l1 = l1.next;
+			if(l2 != null) l2 = l2.next;
+
+		}
+
+		if (carry > 0) {
+			current.next = new ListNode(carry,null);
+		}
+		return dummyHead.next;
+	}
 	
 	private static Node addLinkedList(Node headA, Node headB) {
 		

@@ -3,6 +3,8 @@ package com.InterviewQuestions;
 /**
  * Created by Laks on 2/18/16.
  *
+ * o(n!) time as we know there are n! permutations
+ *
  * ServiceNow Interview 2016
  *
  */
@@ -17,12 +19,17 @@ public class Permutation {
     }
 
     private static void permutation(String prefix, String str) {
-        System.out.println("prefix->   " + prefix + " :: String->   " + str);
+        System.out.println("Prefix : " + prefix + "| Str : " + str);
+
         int n = str.length();
         if (n == 0) System.out.println(prefix);
         else {
+
             for (int i = 0; i < n; i++) {
-                permutation(prefix + str.charAt(i), str.substring(0, i) + str.substring(i + 1, n));
+                char c = str.charAt(i);
+                String before = str.substring(0,i);
+                String after = str.substring(i+1,n);
+                permutation(prefix + c, before+after);
             }
         }
     }

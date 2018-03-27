@@ -53,7 +53,7 @@ public class CheckLoop extends LinkedList{
 		while (fast != null && fast.next != null) {
 			slow = slow.next;
 			fast = fast.next.next;
-			if (slow == fast) {
+			if (slow.data == fast.data) {
 				break;
 			}
 		}
@@ -61,10 +61,10 @@ public class CheckLoop extends LinkedList{
 			return null;
 		}
 		slow = head;
-		while(slow != fast) {
+		while(slow.data != fast.data) {
 			slow = slow.next;
 			fast = fast.next;
-		}				
+		}
 		return fast;
 	}
 

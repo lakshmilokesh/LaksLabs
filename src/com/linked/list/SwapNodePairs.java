@@ -18,4 +18,37 @@ public class SwapNodePairs {
 
 	}
 
+	//Iterative approach : 0(1) space
+	public ListNode swapPairs(ListNode head) {
+		if (head == null || head.next == null) return head;
+
+		ListNode helper = new ListNode(0,null);
+		helper.next = head;
+
+		ListNode pre = helper;
+		ListNode cur = pre.next;
+
+		while (cur != null && cur.next != null) {
+			pre.next = cur.next;
+			cur.next = cur.next.next;
+			pre.next.next = cur;
+
+			pre = cur;
+			cur = pre.next;
+		}
+
+		return helper.next;
+	}
+
+
+	//Recursive approach :  recursive stack uses O(n) space
+	public ListNode swapPairsRec(ListNode head) {
+		if ((head == null)||(head.next == null))
+			return head;
+		ListNode n = head.next;
+		head.next = swapPairs(head.next.next);
+		n.next = head;
+		return n;
+	}
+
 }

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Laks on 2/4/16.
+ * Question asked in FB interview
  *
  * Given a binary tree, return all root-to-leaf paths.
  *

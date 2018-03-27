@@ -12,7 +12,7 @@ public class PerfectSquares {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println("output->" + numSquares(3));
+		System.out.println("output->" + numSquares(4));
 	}
 
 	public static int numSquares(int n) {
@@ -25,10 +25,8 @@ public class PerfectSquares {
 		for (int i = 1; i <= n; i++) {
 			dp[i] = Integer.MAX_VALUE;
 			for (int j = 1; j * j <= i; j++) {
-				System.out.println("i->"+i+", j->"+j+", j*j->"+j*j+", i - j * j ->"+(i - j * j));
-				System.out.println("dp[i]->"+dp[i]+", dp[i-j*j]->"+dp[i - j * j]);
 				dp[i] = Math.min(dp[i], dp[i - j * j] + 1);
-				System.out.println("dp[i]->" + dp[i]);
+				System.out.println("dp["+i+"]->" + dp[i]);
 			}
 		}
 		return dp[n];

@@ -19,8 +19,8 @@ You should return [1,2,3,6,9,8,7,4,5].
  */
 public class SpiralMatrix {
 
-	//static int[][] matrix = {{1,2,3},{4,5,6},{7,8,9}};
-	static int[][] matrix = {{2,3}};
+	static int[][] matrix = {{1,2,3},{4,5,6},{7,8,9}};
+	//static int[][] matrix = {{2,3}};
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

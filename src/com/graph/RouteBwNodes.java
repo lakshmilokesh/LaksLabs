@@ -23,6 +23,7 @@ public class RouteBwNodes extends ConstructGraph{
 		while (!q.isEmpty()) {
 			int value = q.poll();
 			if (!marked[value]) {
+				marked[value] = true;
 				for (int w : g.adj(value)) {  
 					if (end == w)
 						return true;
@@ -31,7 +32,7 @@ public class RouteBwNodes extends ConstructGraph{
 							q.add(w);
 					}	
 				}
-				marked[value] = true;
+
 			}
 		}
 		return false;

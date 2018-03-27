@@ -3,6 +3,13 @@ package com.sorting;
 /**
  * Created by Laks on 1/13/16.
  *
+ * Collision : Two distinct keys hashing to the same index
+ *
+ * Separate chaining : Collision resolution technique. use an array of size M < N
+ * Map key to an integer between 0 to M-1
+ * Insert : put in the front of ith chain
+ * Search : need to search only ith chain
+ *
  *
  */
 public class SeparateChaining {

@@ -17,16 +17,17 @@ public class TraverseMap {
         printMap(map);
     }
 
-    public static void printMap(Map mp) {
+    public static void printMap(Map<String,String> mp) {
 
         Iterator it = mp.entrySet().iterator();
         while (it.hasNext()) {
             Map.Entry pair = (Map.Entry) it.next();
-            System.out.println(pair.getKey() + " = " + pair.getValue());
-            it.remove(); // avoids a ConcurrentModificationException
+            //System.out.println(pair.getKey() + " = " + pair.getValue());
+           // it.remove(); // avoids a ConcurrentModificationException
         }
 
-       // for (String s : mp.keySet()) {
-        //  }
+        for (Map.Entry val : mp.entrySet()) {
+            System.out.println(val.getKey() + "=" + val.getValue());
+        }
     }
 }

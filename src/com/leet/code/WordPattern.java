@@ -46,13 +46,10 @@ public class WordPattern {
             return false;
         for (int i = 0, j = 0; i < pattern.length(); i++, j++) {
             if (!patternMap.containsKey(s[i])) {
-                while (j < pat.length && words.contains(pat[j]))
-                    j++;
-
-                if (j < pat.length) {
-                    words.add(pat[j]);
-                    patternMap.put(s[i], pat[j]);
-                }
+                if (words.contains(pat[j]))
+                    return false;
+                words.add(pat[j]);
+                patternMap.put(s[i], pat[j]);
 
             }
             strb.append(patternMap.get(s[i]));

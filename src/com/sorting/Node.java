@@ -4,6 +4,7 @@ package com.sorting;
  * Created by Laks on 1/13/16.
  *
  * Red Black BST Representation
+ * Red black tree search runs faster because of better balance
  */
 public class Node {
 

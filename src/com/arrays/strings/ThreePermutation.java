@@ -21,7 +21,7 @@ public class ThreePermutation {
 		String str1 = br.readLine();
 		System.out.print("Enter String");
 		String str2 = br.readLine();
-		System.out.println("Permutation ? " + checkPermutation(str1, str2));
+		System.out.println("Permutation ? " + permutation2(str1, str2));
 
 	}
 
@@ -46,7 +46,7 @@ public class ThreePermutation {
 	/*
 	 * Solution 2 : 
 	 */
-	private boolean permutation2(String str1, String str2) {
+	private static boolean permutation2(String str1, String str2) {
 		if (str1.length() != str2.length()) {
 			return false;
 		}

@@ -15,6 +15,11 @@ public class Swap {
 		a = a ^ b;
 		b = a ^ b;
 		a = a ^ b;
+/*
+		a = a + b;
+		b = a - b;
+		a = a - b;*/
+
 		System.out.println("Swapped a ->" + a + "b -> " + b);
 		
 

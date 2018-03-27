@@ -37,7 +37,8 @@ public class RemoveDuplicates2 {
     			j++;
     		}
     	}
-    	return j;
+
+		return j;
     
     }
 }

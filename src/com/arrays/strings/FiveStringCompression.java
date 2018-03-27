@@ -15,7 +15,7 @@ public class FiveStringCompression {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		System.out.print("Enter String");
 		String str1 = br.readLine();
-		System.out.println("Compressed String->" + compressString(str1));
+		System.out.println("Compressed String->" + compress1(str1));
 	}
 
 	private static String compressString(String str) {
@@ -36,5 +36,45 @@ public class FiveStringCompression {
 			s.append(count);
 		}
 		return s.toString();
+	}
+
+	private static String compress(String str) {
+
+
+			StringBuffer s = new StringBuffer();
+			int j = 0, i =0;
+			while( i < str.length()) {
+				char ichar = str.charAt(i);
+				int count = 1;j = i+1;
+				while (j < str.length() && ichar == str.charAt(j)) {
+					j++;
+					count++;
+				}
+				i = j;
+				s.append(ichar);
+				s.append(count);
+			}
+			return s.toString();
+
+	}
+
+	private static String compress1(String str) {
+
+
+		StringBuffer s = new StringBuffer();
+		int j = 0, i =0;
+		while( i < str.length()) {
+			char ichar = str.charAt(i);
+			int count = 1;
+			while (i+1 < str.length() && ichar == str.charAt(i+1)) {
+				i++;
+				count++;
+			}
+			s.append(ichar);
+			s.append(count);
+			i++;
+		}
+		return s.toString();
+
 	}
 }

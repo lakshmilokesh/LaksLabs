@@ -18,19 +18,25 @@ public class IntegerReverse {
 		System.out.println("Enter the integer");
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int sequence = Integer.parseInt(br.readLine());
-		System.out.println("Reverse->" + reverse(sequence));
+		System.out.println("Reverse->" + reverse(1534236469));
 
 	}
 	public static int reverse(int x) {
 
-		long rev = 0;
-		while(x != 0){
+		boolean neg =  (x < 0) ? true:false;
+
+		int rev = 0;
+		x = (neg)? x*-1 : x;
+		while(x > 0){
+
+			if (rev > Integer.MAX_VALUE/10 || (rev == Integer.MAX_VALUE/10 && x%10 == 8))
+				return 0;
 			rev = rev*10 + x%10;
 			x = x/10;
-			if (rev > Integer.MAX_VALUE || rev < Integer.MIN_VALUE)
-				return 0;
+
 		}
-		return (int)rev;
+		rev = (neg)? rev*-1 : rev;
+		return rev;
 
 	}
 

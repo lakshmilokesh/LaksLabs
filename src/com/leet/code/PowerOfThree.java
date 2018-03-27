@@ -12,13 +12,15 @@ package com.leet.code;
 public class PowerOfThree {
 
     public static void main(String[] args) {
-        System.out.println(isPowerOfThree(243));
+        System.out.println(powerOfThree(1234569));
+        System.out.println(isPowerOfThree(1234569));
     }
 
     /*
      * With loops
      */
     public static boolean powerOfThree(int n) {
+
         while (n % 3 == 0) {
             n /= 3;
         }

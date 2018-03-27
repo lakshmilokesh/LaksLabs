@@ -47,17 +47,17 @@ public class InsertElement {
 	/*
 	 * With Recursion
 	 */
-	public static void insertElementRecursion(TreeNode root, int data) {
+	public static TreeNode insertElementRecursion(TreeNode root, int data) {
 
 		TreeNode node = new TreeNode(data);
 		if (root == null) {
 			root = node;
-			return;
+			return root;
 		}
 
-		insertElementRecursion(root.left,data);
-		insertElementRecursion(root.right,data);
-
+		root.left = insertElementRecursion(root.left,data);
+		root.right = insertElementRecursion(root.right,data);
+		return root;
 	}
 
 }

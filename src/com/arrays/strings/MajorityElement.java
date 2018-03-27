@@ -5,7 +5,7 @@ public class MajorityElement {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] input = new int[] {2,3,4,2,2,5,2};
+		int[] input = new int[] {2,3,2,1,2,0,2,0,2,2,5};
 		int majorityElement = findMajorityELement(input);
 		if (validateMajorityElement(input, majorityElement))
 			System.out.println("Majority Element :" + majorityElement);
@@ -33,6 +33,7 @@ public class MajorityElement {
 	}
 	
 	private static boolean validateMajorityElement(int[] input, int majorityElement) {
+		System.out.println(majorityElement);
 		int count = 0;
 		for (int i : input) {
 			if (i == majorityElement)

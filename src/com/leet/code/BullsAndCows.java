@@ -34,38 +34,32 @@ public class BullsAndCows {
 
     public static void main(String[] args) {
 
-        String secret = "11";
-        String guess = "10";
+        String secret = "10";
+        String guess = "01";
         System.out.println(getHint(secret,guess));
     }
 
     public static String getHint(String secret, String guess) {
+        int bulls = 0;
+        int cows = 0;
+        int[] numbers = new int[10];
+        for (int i = 0; i<secret.length(); i++) {
+            int s = Character.getNumericValue(secret.charAt(i));
+            int g = Character.getNumericValue(guess.charAt(i));
 
-        Map<Character,Integer> stringMap = new HashMap<Character, Integer>();
-        int i = 0;
-        int j=0, cowsCount = 0, bullsCount = 0;
-        StringBuilder sb = new StringBuilder();
-        char[] secretArray = secret.toCharArray();
-        char[] guessArray = guess.toCharArray();
-        while(i < secret.length()) {
-            stringMap.put(secretArray[i],i);
-            System.out.println(secretArray[i]);
-            i++;
-        }
-        System.out.println("================");
-        while (j < guess.length()) {
-            System.out.println(guessArray[j]);
-            if (stringMap.containsKey(guessArray[j])) {
-                if (j == stringMap.get(guessArray[j])){
-                    bullsCount++;
+            if (s == g) bulls++;
+            else {
+                //if prev part of guess has curr digit in secret
+                //then we found a pair that has same digit with different position
+                if (numbers[s] < 0) cows++;
+                //if prev part of secret has curr digit in guess
+                //then we found a pair that has same digit with different position
+                if (numbers[g] > 0) cows++;
 
-                }
-                else {
-                    cowsCount++;
-                }
+                numbers[s] ++;
+                numbers[g] --;
             }
-                j++;
         }
-        return sb.append(bullsCount+"A"+cowsCount+"B").toString();
+        return bulls + "A" + cows + "B";
     }
 }

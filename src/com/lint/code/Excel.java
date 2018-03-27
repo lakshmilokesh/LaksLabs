@@ -74,7 +74,7 @@ public class Excel {
 	 */
 	public static void main(String[] args) {
 
-		for (int i = 29; i < 30; i++) {
+		for (int i = 299; i < 300; i++) {
 			System.out.println(i + ".Corresponding column ->" + numberToTitle(i));
 			System.out.println("Title to Number -> " + titleToNumber(numberToTitle(i)));
 		}

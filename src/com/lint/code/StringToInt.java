@@ -37,6 +37,7 @@ public class StringToInt {
 	}
 
 	//Leet Code solution : handles overflow and underflow
+	//using str.charAt(i) == ' ' takes less time than Character.isWhitespace(str.charAt(i)
 
 	public int atoi(String str) {
 		int i = 0, n = str.length();
@@ -55,7 +56,8 @@ public class StringToInt {
 				return sign == 1 ? Integer.MAX_VALUE : Integer.MIN_VALUE;
 			}
 			num = num * 10 + digit;
-			i++; }
+			i++;
+		}
 		return sign * num;
 	}
 

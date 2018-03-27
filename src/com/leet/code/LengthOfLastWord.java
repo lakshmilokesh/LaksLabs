@@ -39,28 +39,6 @@ public class LengthOfLastWord {
 		    start--;      
 		}
 	    return c.length - (start+1);
-	  
-	  /*
-	    String str = s.trim();
-		int n = str.length();
-		System.out.println(str);
-		
-		int length = 0;
-		if (str == null || str.isEmpty()) {
-			return length;
-
-		}
-		if (!str.contains(" "))
-			return n;
-		
-		for (int j = n-1; j >=0; j--) { 
-			if(str.charAt(j) == ' ') {
-				length = str.substring(j+1, n).length();
-				break;
-			}
-		}
-		return length;
-		 */
 	}
 
 }

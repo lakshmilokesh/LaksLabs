@@ -38,7 +38,7 @@ public class BalancedBinaryTree {
     	int R = maxDepth(root.right);
     	if (R == -1)
     		return -1;
-    	return (Math.abs(L - R) <= 1) ? Math.max(L, R) : -1;
+    	return (Math.abs(L - R) <= 1) ? (Math.max(L, R)+1) : -1;
     	
     }
     

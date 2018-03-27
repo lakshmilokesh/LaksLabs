@@ -25,7 +25,11 @@ public class StackImplementation extends LinkedList{
 			top = top.next;
 			return data;
 		}
-		return null;
+		else {
+            System.out.println("stack empty");
+            return null;
+        }
+
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

@@ -21,6 +21,12 @@ import java.io.InputStreamReader;
          3   5
  * For example, the lowest common ancestor (LCA) of nodes 2 and 8 is 6. Another example is LCA of
  * nodes 2 and 4 is 2, since a node can be a descendant of itself according to the LCA definition.
+ *
+ *
+ *
+ * Lowest common ancestor for binary tree
+ * Refer https://www.youtube.com/watch?v=NBcqBddFbZw
+ *
  * 
  */
 public class LowestCommonAncestor {
@@ -84,7 +90,7 @@ public class LowestCommonAncestor {
 		else if (n.val < p.val && n.val < q.val)
 			return lowestCommonAncestor(n.right, p, q); //  then the value is in the right side of the tree
 
-		return n; // equals case either p or q is equal to m
+		return n; // equals case either p or q is equal to n
 	}
 
 }

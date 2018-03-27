@@ -18,5 +18,11 @@ public class Split {
 		System.out.println(arr[++j]);
 		System.out.println(j);
 
+		System.out.println("++++++++++++++++++++++++++++++++++");
+
+		String s = "s";
+		String p = ".1";
+		System.out.println("-----"+p.substring(1));
+
 	}
 }

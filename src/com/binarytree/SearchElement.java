@@ -3,6 +3,9 @@ package com.binarytree;
 import java.util.LinkedList;
 import java.util.Queue;
 
+/*
+ * Search for an element in binary tree
+ */
 public class SearchElement {
 
 	public static void main(String[] args) {

@@ -15,5 +15,8 @@ public class ArrayEquals {
 			System.out.println("Same");
 		else
 			System.out.println("Not same");
+
+		int size = 3;
+		System.out.println(size-(size / 2)-1);
 	}
 }

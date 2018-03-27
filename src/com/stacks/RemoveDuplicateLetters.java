@@ -21,7 +21,7 @@ public class RemoveDuplicateLetters {
     static Stack<Character> s2 = new Stack<Character>();
 
     public static void main(String[] args) {
-        System.out.println( "Output->" + removeDuplicateLetters("cbacdcbc"));
+        System.out.println( "Output->" + removeDuplicateLetters("cccxxaaaz"));
     }
     public static String removeDuplicateLetters(String s) {
 
@@ -44,5 +44,6 @@ public class RemoveDuplicateLetters {
             str.append(s2.pop());
         }
         return str.toString();
+
     }
 }

@@ -46,6 +46,8 @@ public class SearchMatrix1 {
             int mid=(start+end)/2;
             int midX=mid/n;
             int midY=mid%n;
+            System.out.println("m: " + m + " n:" + n);
+            System.out.println("mid : " + mid + "midX :" + midX + "midY : " + midY);
  
             if(matrix[midX][midY]==target) 
                 return true;

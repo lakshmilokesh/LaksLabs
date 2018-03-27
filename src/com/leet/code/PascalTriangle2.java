@@ -28,6 +28,7 @@ public class PascalTriangle2 {
 
         result.add(1);
         for (int i = 1; i <= rowIndex; i++) {
+            System.out.println( result.size() - 2);
             for (int j = result.size() - 2; j >= 0; j--) {
                 result.set(j + 1, result.get(j) + result.get(j + 1));
             }

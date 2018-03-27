@@ -45,7 +45,7 @@ Question 2: Query to display current date
 Question 3: There is a table which contains two column Student and Marks, you need to find all the students, whose
 marks are greater than average marks i.e. list of above average students.
 
-            SELECT student, marks from table where marks > SELECT AVG(marks) from table)
+            SELECT student, marks from table where marks > (SELECT AVG(marks) from table)
 
 
 
@@ -58,8 +58,8 @@ Question 5: The Employee table holds all employees including their managers. Eve
             also a column for the manager Id. Given the Employee table, write a SQL query that finds out employees
             who earn more than their managers.
 
-            SELECT a.NAME FROM Employee a, Employee b
-            WHERE a.ManagerId = b.Id AND a.Salary > b.Salary;
+            SELECT e.NAME FROM Employee e, Employee m
+            WHERE e.ManagerId = m.Id AND e.Salary > m.Salary;
 
 
 

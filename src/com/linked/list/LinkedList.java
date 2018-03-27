@@ -86,24 +86,5 @@ public class LinkedList {
 		}
 		return count;
 	}
-
-	public static Node reverse(Node headA) {
-		
-		if (headA == null)
-			return null;
-		Node current = headA;
-		Node previous = null;
-		Node next = null;
-		Node head = null;
-		while (current.next != null) {			
-			next = current.next;
-			current.next = previous;
-			previous = current;
-			current = next;
-		}
-		head = current;
-		current.next = previous;
-		return head;
-	}	
 }
 

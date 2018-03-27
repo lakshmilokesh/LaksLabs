@@ -13,7 +13,7 @@ import java.util.Queue;
  * 
  *            5
              / \
-            4   8
+            4   82
            /   / \
           11  13  4
          /  \      \

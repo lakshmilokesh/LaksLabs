@@ -6,6 +6,10 @@ import java.util.Random;
  * Created by Laks on 1/22/16.
  *
  * Shuffle a deck of cards.
+ * Generate a random real number for each array entry
+ *
+ * In iteration i, pick an integer r between 0 and i
+ * swap a[i] and a[r]
  *
  */
 public class KnuthShuffle {

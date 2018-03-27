@@ -8,14 +8,16 @@ package com.leet.code;
  *
  * Given a list of non-negative integers representing the amount of money of each house,
  * determine the maximum amount of money you can rob tonight without alerting the police.
+ *
+ * Question asked in FB interview
  * 
  */
 public class HouseRobbery {
 
-	public static int[] num = new int[]{50,1,1,100};
+	public static int[] num = new int[]{10,94,80,80,96};
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println(rob(num));
+		System.out.println(robDp(num));
 	}
 	/*
 	 * Dynamic Programming

@@ -1,13 +1,15 @@
 package com.InterviewQuestions;
 
 /*
+ * find the number of 1 bits after multiplication
+ *
  * AOL Coding interview 2015
  */
 public class Aol1 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println(solution(17,31));
+		System.out.println(solution(5,3));
 	}
 
     public static int solution1(int A, int B) {
@@ -30,11 +32,11 @@ public class Aol1 {
     	System.out.println(result);
     	int oneCount = 0;
     	while (result > 0) {
-    		if ((result & 1L) == 1) {
+			if ((result & 1L) == 1) {
     			oneCount++;
     		}
-    		result = result >> 1;
-    	}
+			result = result >> 1;
+		}
     	
     	return oneCount;
     }
