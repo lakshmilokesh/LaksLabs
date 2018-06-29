@@ -4,6 +4,9 @@ package com.lint.code;
  *
  * Write a function to find the longest common prefix string amongst an array of strings.
  *
+ * The time complexity of this solution is O(m * n), where m is the length of the LCP string,
+ * n is the number of strings in the array.
+ *
  */
 public class LongestCommonPrefix {
 

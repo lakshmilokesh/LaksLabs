@@ -18,7 +18,7 @@ public class VersionComparison {
 		// TODO Auto-generated method stub
 		String v1 = "1.0.1";
 		String v2 = "1";
-		System.out.println("Version comparision result" + compareVersion(v1, v2));
+		System.out.println("Version comparision result" + compareVersions(v1, v2));
 
 	}
 	public static int compareVersions(String version1, String version2)
@@ -32,11 +32,9 @@ public class VersionComparison {
 			Integer v1 = i < levels1.length ? Integer.parseInt(levels1[i]) : 0;
 			Integer v2 = i < levels2.length ? Integer.parseInt(levels2[i]) : 0;
 			int compare = v1.compareTo(v2);
-			if (compare != 0) {
-				return compare;
-			}
+			if (compare != 0)
+			return compare;
 		}
-
     	return 0;
     }
 	public static int compareVersion(String version1, String version2) {

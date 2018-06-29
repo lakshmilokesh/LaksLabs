@@ -4,16 +4,16 @@ package com.InterviewQuestions;
  *     Question asked in proofpoint on  8th January 2016
  *
  *     string1  string2   Result
- *     google   goe       true
- *     google   geo       false
- *     google   gte       false
- *     google   goo       true
+ *     googleMF   goe       true
+ *     googleMF   geo       false
+ *     googleMF   gte       false
+ *     googleMF   goo       true
  */
 public class StringMatch {
 
     public static void main(String[] args) {
 
-        System.out.println(containsAllCharsInSameOrder("google","goe"));
+        System.out.println(containsAllCharsInSameOrder("googleMF","goe"));
 
     }
 

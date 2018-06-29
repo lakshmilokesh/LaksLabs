@@ -6,7 +6,7 @@ package com.InterviewQuestions;
  * ServiceNow 2016
  *
  * Given a key and array of integers sorted in ascending order. Insert the key in the array. Array has empty places
- * filled with -1. It can hold negative integers also.
+ * filled with -1 in the end. It can hold negative integers also.
  *
  * Example array
  * [3,5,6,7,9,-1,-1,-1]

@@ -7,6 +7,8 @@ import java.util.Stack;
 /**
  * Created by Laks on 1/8/16.
  *
+ * Applicable only for DAG (Directed Acyclic Graph
+ *
  * Run DFS
  * return vertices in reverse postorder
  *

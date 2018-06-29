@@ -33,6 +33,7 @@ public class StackPlates {
 		int value = s.pop();
 		return value;
 	}
+
 	public Stack<Integer> getLast() {
 		
 		if (stacks == null|| stacks.size() == 0) {
@@ -46,6 +47,4 @@ public class StackPlates {
 		// TODO Auto-generated method stub
 
 	}
-	
-
 }

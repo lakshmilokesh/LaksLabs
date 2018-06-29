@@ -4,7 +4,7 @@ public class LongestDistinctSubstring {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println("length" + lengthOfLongestSubstringTwoDistinct("ab"));
+		System.out.println("length" + lengthOfLongestSubstringTwoDistinct("abbaac"));
 	}
 
 	public static int lengthOfLongestSubstringTwoDistinct(String s) {

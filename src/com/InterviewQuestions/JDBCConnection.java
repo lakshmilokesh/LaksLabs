@@ -6,7 +6,7 @@ import java.util.Properties;
 /**
  * Created by Laks on 1/21/16.
  *
- * Question asked for Sahitya in Oracle interview 2015
+ * Question in Oracle interview 2015 for a friend
  *
  */
 public class JDBCConnection {

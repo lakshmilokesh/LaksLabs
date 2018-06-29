@@ -9,6 +9,8 @@ public class Boxing {
 		box(i);
 		System.out.println("After Method call returns : "+i);
 
+		System.out.println("======================================================");
+
 		int j = 9;
 		box2(j);
 		System.out.println("After Method call returns : "+j);

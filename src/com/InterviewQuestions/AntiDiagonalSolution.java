@@ -2,7 +2,7 @@ package com.InterviewQuestions;
 
 /*
  * Solved by Lokesh
- * Question asked in google interview 2015
+ * Question asked in googleMF interview 2015
  *
  */
 public class AntiDiagonalSolution {

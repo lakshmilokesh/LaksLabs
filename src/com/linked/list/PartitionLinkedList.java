@@ -1,5 +1,7 @@
 package com.linked.list;
 
+import com.linked.list.LinkedList;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -8,7 +10,7 @@ import java.io.InputStreamReader;
  * Partition a linked list around a value x, such that all nodes less than x come before all nodes greater 
  * than or equal to x.
  */
-public class PartitionLinkedList extends LinkedList{
+public class PartitionLinkedList extends LinkedList {
 
 	private static Node Lefthead = null;
 	private static Node rightHead = null;

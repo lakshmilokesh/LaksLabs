@@ -11,6 +11,12 @@ package com.lint.code;
  * Have you consider that the string might be empty? This is a good question to ask during an interview.
  * 
  * For the purpose of this problem, we define empty string as valid palindrome.
+ *
+ * Below is a Facebook Interview Question
+ *
+ * Given a string "L*&EVe)))l", write a method which will determine if the input is a palindrome.
+ * Ignore all special characters. Uppercase/lowercase should be considered as same.
+ *
  */
 public class ValidPalindrome {
 

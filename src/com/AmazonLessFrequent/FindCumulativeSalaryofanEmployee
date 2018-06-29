@@ -1,0 +1,23 @@
+
+
+#The Employee table holds the salary information in a year.
+#
+#Write a SQL to get the cumulative sum of an employee's salary over a period of 3 months but exclude the most recent month.
+#
+#The result should be displayed by 'Id' ascending, and then by 'Month' descending.
+
+
+select E1.id, E1.month, (ifnull(E1.salary,0) +ifnull(E2.salary,0) + ifnull(E3.salary,0)) as Salary  from
+(Select id,max(month) as month from Employee group by id having count(*) > 1) as maxmonth
+left Join Employee E1 on (maxmonth.id = E1.id and maxmonth.month > E1.month)
+left Join Employee E2 on (E1.id = E2.id and E1.month = E2.month + 1)
+left Join Employee E3 on (E1.id = E3.id and E1.month = E3.month + 2)
+Order by id ASC, month DESC
+
+#Delete Duplicate Emails
+
+DELETE p1 FROM Person p1,
+    Person p2
+WHERE
+    p1.Email = p2.Email AND p1.Id > p2.Id
+

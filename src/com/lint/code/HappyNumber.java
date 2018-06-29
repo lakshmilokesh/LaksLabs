@@ -27,27 +27,6 @@ public class HappyNumber {
 		int n = 2;
 		System.out.println(n + "is a happy number ?" + isHappy(n));
 	}
-	
-    public static boolean isHappy(int n) {
-        boolean happy = false;
-        int sum = 0;
-        Set<Integer> num = new HashSet<Integer>();
-        while (!num.contains(n)) {
-        	num.add(n);
-        	while (n > 0) {
-        		int digit = n%10;
-        		sum = sum + (digit * digit);
-        		n = n/10;
-        	}
-        	n = sum;
-        	sum = 0;
-        	System.out.println(n);
-        	if (n == 1) {
-        		return true;
-        	}
-        }
-        return happy;
-    }
 
 	int digitSquareSum(int n) {
 		int sum = 0, tmp;
@@ -70,5 +49,25 @@ public class HappyNumber {
 		if (slow == 1) return true;
 		else return false;
 	}
+    public static boolean isHappy(int n) {
+        boolean happy = false;
+        int sum = 0;
+        Set<Integer> num = new HashSet<Integer>();
+        while (!num.contains(n)) {
+        	num.add(n);
+        	while (n > 0) {
+        		int digit = n%10;
+        		sum = sum + (digit * digit);
+        		n = n/10;
+        	}
+        	n = sum;
+        	sum = 0;
+        	System.out.println(n);
+        	if (n == 1) {
+        		return true;
+        	}
+        }
+        return happy;
+    }
 
 }

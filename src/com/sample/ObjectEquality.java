@@ -9,7 +9,7 @@ public class ObjectEquality {
 
     public static void main(String[] args) {
         Account a1 = new Account("Sandy", 10000);
-        Account a2 = new Account("Sandy", 1000);
+        Account a2 = new Account("Sandy", 10000);
 
         Integer one = new Integer(10);
         System.out.println("EQUALS -->" + a1.equals(a2)); //false

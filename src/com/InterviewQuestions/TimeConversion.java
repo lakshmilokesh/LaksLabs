@@ -20,16 +20,16 @@ public class TimeConversion {
         String[] timeSplit = time.split(":");
         System.out.println(time);
         if (time.toUpperCase().contains("PM")) {
-            int hour = Integer.parseInt(timeSplit[0]) + 12;
-            timeSplit[0] = ""+hour;
+            timeSplit[0] = String.valueOf(Integer.parseInt(timeSplit[0])+12);
+            timeSplit[0] = timeSplit[0].equals("24") ? "12" : timeSplit[0];
         }
-        else {
-            if (timeSplit[0].equals("12")) {
-                timeSplit[0] = "00";
-            }
+        else if (time.toUpperCase().contains("AM")) {
+            timeSplit[0] = timeSplit[0].equals("12") ? "00" : timeSplit[0];
         }
         timeSplit[2] = timeSplit[2].substring(0,2);
-        System.out.print(timeSplit[0]+":"+timeSplit[1]);
+        System.out.println(timeSplit[0]+":"+timeSplit[1]);
+
+        System.out.println(String.join(":", timeSplit));
     }
 }
 
