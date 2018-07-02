@@ -19,8 +19,8 @@ public class ThreeSumSmaller {
 
 
     public static void main(String[] args) {
-        int[] arr = new int[]{-2, 0, 1, 3};
-        int target = 2;
+        int[] arr = new int[]{3,5,2,8,1,4,-1};
+        int target = 7;
         System.out.println(threeSumSmaller(arr,target));
     }
     public static int threeSumSmaller(int[] nums, int target) {

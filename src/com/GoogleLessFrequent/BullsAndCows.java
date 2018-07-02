@@ -1,4 +1,4 @@
-package com.leet.code;
+package com.GoogleLessFrequent;
 
 import java.util.HashMap;
 import java.util.Map;

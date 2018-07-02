@@ -1,0 +1,5 @@
+git status
+git add .
+git status
+git commit -am "new set of code"
+git push
