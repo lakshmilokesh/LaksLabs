@@ -1,7 +1,8 @@
 package com.GoogleLessFrequent;
 
 /*
- * Given a Binary Search Tree (BST) with the root node root, return the minimum difference between the values of any two different nodes in the tree.
+ * Given a Binary Search Tree (BST) with the root node root, return the minimum difference between the values of any two
+ * different nodes in the tree.
 
 Example :
 
@@ -32,11 +33,35 @@ import java.util.List;
 
 public class MinimumDistanceBetweenBSTNodes {
 
-    List<Integer> vals;
-    public int minDiffInBST(TreeNode root) {
+    static List<Integer> vals;
+    static Integer res;
+    static Integer prev;
+
+    public static int minDiffInBSTBetter(TreeNode root) {
+        res = Integer.MAX_VALUE;
+        prev = null;
+        inorder(root);
+        return res;
+    }
+
+    public static void inorder(TreeNode root) {
+        if(root == null) return;
+        inorder(root.left);
+        if(prev !=  null){
+            res = Math.min(res, root.val - prev);
+        }
+        prev = root.val;
+        inorder(root.right);
+    }
+
+    public static int minDiffInBST(TreeNode root) {
         vals = new ArrayList();
         dfs(root);
         Collections.sort(vals);
+
+        for (int i : vals) {
+            System.out.println(i);
+        }
 
         int ans = Integer.MAX_VALUE;
         for (int i = 0; i < vals.size() - 1; ++i)
@@ -45,10 +70,21 @@ public class MinimumDistanceBetweenBSTNodes {
         return ans;
     }
 
-    public void dfs(TreeNode node) {
+    public static void dfs(TreeNode node) {
         if (node == null) return;
         vals.add(node.val);
         dfs(node.left);
         dfs(node.right);
+    }
+
+    public static void main(String[] args) {
+        TreeNode root = new TreeNode(4);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(6);
+        root.left.left = new TreeNode(1);
+        root.left.right = new TreeNode(3);
+
+        System.out.println(minDiffInBSTBetter(root));
+
     }
 }

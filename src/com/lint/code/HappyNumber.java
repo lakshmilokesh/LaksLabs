@@ -20,7 +20,7 @@ import java.util.Set;
  * 
  * SIMPLER SOLUTION : REFER AddDigits.java
  */
-public class HappyNumber {
+	public class HappyNumber {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -49,6 +49,7 @@ public class HappyNumber {
 		if (slow == 1) return true;
 		else return false;
 	}
+
     public static boolean isHappy(int n) {
         boolean happy = false;
         int sum = 0;

@@ -1,4 +1,6 @@
-package com.binarytree;
+package com.LinkedIn;
+
+import com.binarytree.TreeNode;
 
 import java.util.ArrayList;
 import java.util.Collections;

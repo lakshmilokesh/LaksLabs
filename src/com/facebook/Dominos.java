@@ -19,8 +19,6 @@ public class Dominos {
 
     public static boolean findSix(int[][] dominoes, int target){
 
-        int len = dominoes.length;
-
         boolean [][] found = new boolean[128][128];
         for(int[] l : dominoes){
             if(found[target - l[0]][target - l[1]]) {

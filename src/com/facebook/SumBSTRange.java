@@ -29,29 +29,41 @@ import com.binarytree.TreeNode;
 
 public class SumBSTRange {
 
+    static int count = 0;
+    static int sum = 0;
     public static void main(String[] args) {
+        TreeNode node = new TreeNode(10);
+        node.left = new TreeNode(5);
+        node.left.left = new TreeNode(1);
+        node.right = new TreeNode(50);
+        node.right.left = new TreeNode(40);
+        node.right.right = new TreeNode(100);
+
+        int sum = getCountAndSum(node,5,45);
+        System.out.println(sum);
 
     }
-    public static int getCountAndSum(TreeNode node, int low, int high, int count, int sum) {
+    public static int getCountAndSum(TreeNode node, int low, int high) {
 
         //Base case
-        if (node == null)
+        if(node == null)
             return 0;
 
-        // this node lies in range, if yes, then add 1 to result (count) or add he value of the node to the sum and
-        // recur for both of its children.
-        if (node.val >= low && node.val <= high) {
-            count++;
-            sum+=node.val;
-        }
+        // If current node is in range, then
+        // include it in count and recur for
+        // left and right children of it
+        if(node.val >= low && node.val <= high)
+            return 1 + getCountAndSum(node.left, low, high)+
+                    getCountAndSum(node.right, low, high);
 
-        //If current node is smaller than low value of range, then recur for right child, else recur for left child.
-        else if(node.val > high)
-            getCountAndSum(node.left,low,high,count,sum);
-        else {
-            getCountAndSum(node.right,low,high,count,sum);
-        }
-      return sum;
+            // If current node is smaller than low,
+            // then recur for right child
+        else if(node.val < low)
+            return getCountAndSum(node.right, low, high);
+
+            // Else recur for left child
+        else
+            return getCountAndSum(node.left, low, high);
     }
 }
 

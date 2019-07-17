@@ -25,8 +25,8 @@ public class RegaularExpressionMatching {
 
     public static void main(String[] args) {
 
-        String s = "aab";
-        String p = "a*b";
+        String s = "ab";
+        String p = ".*";
         System.out.println("is match -> " + isMatch(s,p));
     }
 
@@ -49,14 +49,14 @@ public class RegaularExpressionMatching {
                 return false;
             }
 
-            // otherwise, compare the rest of the string of s and p.
+            // otherwise, compare the rest of the string of s and p. will go to base case
             else {
                 return isMatch(s.substring(1), p.substring(1));
             }
         }
 
         // case 1: when the second char of p is not '*'
-        if (p.charAt(1) != '*') {
+            if (p.charAt(1) != '*') {
             if (s.length() < 1) {
                 return false;
             }

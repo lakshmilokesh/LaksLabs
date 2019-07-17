@@ -32,9 +32,9 @@ package com.AmazonLessFrequent;
  *
  * Complexity Analysis
  *
- * Time Complexity: O(N)O(N) where NN is the number of nodes in the input tree. We traverse every node.
+ * Time Complexity: O(N) where N is the number of nodes in the input tree. We traverse every node.
  *
- * Space Complexity: O(N)O(N), the size of our queue.
+ * Space Complexity: O(N), the size of our queue.
  *
  */
 
@@ -52,6 +52,8 @@ public class MaximumWidthofBinaryTree {
         while (!queue.isEmpty()) {
             AnnotatedNode a = queue.poll();
             if (a.node != null) {
+
+                // if parent is at position p then the child will be at location 2p and 2p+1
                 queue.add(new AnnotatedNode(a.node.left, a.depth + 1, a.pos * 2));
                 queue.add(new AnnotatedNode(a.node.right, a.depth + 1, a.pos * 2 + 1));
                 if (curDepth != a.depth) {

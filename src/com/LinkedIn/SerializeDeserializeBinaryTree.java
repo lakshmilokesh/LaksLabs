@@ -1,7 +1,7 @@
-package com.googleMF;
+package com.LinkedIn;
 
 /*
- * Serialization is the process of converting a data structure or object into a sequence of bits so that it can be
+ *Serialization is the process of converting a data structure or object into a sequence of bits so that it can be
  * stored in a file or memory buffer, or transmitted across a network connection link to be reconstructed later in the
  * same or another computer environment.
  *
@@ -30,6 +30,7 @@ package com.googleMF;
  */
 
 import com.binarytree.TreeNode;
+import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -37,7 +38,9 @@ import java.util.Queue;
 public class SerializeDeserializeBinaryTree {
 
     public static void main(String[] args) {
-        TreeNode root = new TreeNode(10);
+        TreeNode root = new TreeNode(8);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(9);
         SerializeDeserializeBinaryTree obj = new SerializeDeserializeBinaryTree();
         obj.deserialize(obj.serialize(root));
     }
@@ -66,13 +69,17 @@ public class SerializeDeserializeBinaryTree {
 
         // Remove the trailing #
         String result = sb.toString();
+        System.out.println("1111  =>"+ result);
         int j = result.length() - 1;
+        System.out.println("length  =>"+ j);
 
-        while (j > 0 && result.charAt(j) == ',' && result.charAt(j) == '#') {
+        while (j > 1 && result.charAt(j) == ',' && result.charAt(j-1) == '#') {
             j -= 2;
         }
+        System.out.println(j);
 
         result = result.substring(0, j);
+        System.out.println(result);
         return sb.toString();
     }
 

@@ -5,6 +5,9 @@ import java.io.InputStreamReader;
 
 /*
  * Delete a node in the middle of a singly linked list, given only access to that node.
+ *
+ * The below solution will fail for the last node
+ *
  */
 public class DeleteNode extends LinkedList{
 

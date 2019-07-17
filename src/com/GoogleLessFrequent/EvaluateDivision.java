@@ -19,7 +19,8 @@ queries = [ ["a", "c"], ["b", "a"], ["a", "e"], ["a", "a"], ["x", "x"] ].
 The input is always valid. You may assume that evaluating the queries will result in no division by zero and there is no contradiction.
 
 
- * SOLUTION :  Image a/b = k as a link between node a and b, the weight from a to b is k, the reverse link is 1/k. Query is to find a path between two nodes.
+ * SOLUTION :  Image a/b = k as a link between node a and b, the weight from a to b is k, the reverse link is 1/k.
+ * Query is to find a path between two nodes.
  *
  */
 
@@ -34,7 +35,8 @@ public class EvaluateDivision {
 
         String[][] equations = new String [][]{{"a", "b"}, {"b", "c"} };
         double[] values = new double[] {2.0, 3.0};
-        String[][] queries = new String[][]{{"a", "c"}, {"b", "a"}, {"a", "e"}, {"a", "a"}, {"x", "x"} };
+        String[][] queries = new String[][]{{"a", "c"} };
+                //,{"b", "a"}, {"a", "e"}, {"a", "a"}, {"x", "x"} };
         System.out.println(calcEquation(equations,values,queries));
     }
 

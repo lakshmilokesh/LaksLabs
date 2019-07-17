@@ -6,6 +6,22 @@ package com.AmazonLessFrequent;
  *
  * Count the number of distinct islands. An island is considered to be the same as another if and only if one island can
  * be translated (and not rotated or reflected) to equal the other.
+ *
+ * Example 1
+ *
+ * 11000
+ * 11000
+ * 00011
+ * 00011
+ *
+ * Given the above grid map, return 1.
+ *
+ * 11011
+ * 10000
+ * 00001
+ * 11011
+ * Given the above grid map, return 3.
+ *
  */
 
 import java.util.HashSet;

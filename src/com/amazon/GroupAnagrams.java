@@ -27,7 +27,7 @@ import java.util.HashMap;
  *
  */
 
-public class   GroupAnagrams {
+public class  GroupAnagrams {
 
     public List<List<String>> groupAnagrams1(String[] strs) {
         if (strs.length == 0) return new ArrayList();

@@ -37,6 +37,7 @@ public class LongestSubstring {
 			}
 			exist[c] = true;
 			maxLen = Math.max(j - i + 1, maxLen);
+			System.out.println();
 
 		}
 		return maxLen;

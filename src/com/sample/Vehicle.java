@@ -34,7 +34,7 @@ public class Vehicle {
 	}
 	
 	  static void printProperties() {
-		System.out.println("inside vehicle class print properties method");
+		System.out.println("###inside vehicle class print properties method");
 	}
 	 
 	 public static void test(int num){

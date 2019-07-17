@@ -1,4 +1,4 @@
-package com.amazon;
+package com.LinkedIn;
 
 /*
  * Given an array of n integers where n > 1, nums, return an array output such that output[i] is equal to the product
@@ -14,6 +14,8 @@ package com.amazon;
  *
  * Solution : Given numbers [2, 3, 4, 5], regarding the third number 4, the product of array except 4 is 2*3*5 which
  * consists of two parts: left 2*3 and right 5. The product is left*right. We can get lefts and rights:
+ *
+ * ebay 2018
  *
  *
  *

@@ -20,8 +20,6 @@ Explanation: Because the new interval [4,8] overlaps with [3,5],[6,7],[8,10].
  *
  */
 
-import com.googleMF.MergeInterval;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;

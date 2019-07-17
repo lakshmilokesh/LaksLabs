@@ -18,7 +18,7 @@ import java.util.List;
 public class RemoveInvalidParanthesis {
 
     public static void main(String[] args) {
-        System.out.println(removeInvalidParentheses("()())()"));
+        System.out.println(removeInvalidParentheses("())"));
     }
 
     public static List<String> removeInvalidParentheses(String s) {
@@ -37,7 +37,7 @@ public class RemoveInvalidParanthesis {
             // Remove a parenthesis
             if (stack >= 0) continue;
             for (int j = last_j; j <= i; ++j)
-                if (s.charAt(j) == par[1] && (j == last_j || s.charAt(j - 1) != par[1]))
+                if (s.charAt(j) == par[1] && (j == last_j || s.charAt(j - 1) != par[1])) // if its the first one that is  ')'
                     remove(s.substring(0, j) + s.substring(j + 1, s.length()), ans, i, j, par);
             return;
         }

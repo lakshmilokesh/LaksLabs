@@ -15,7 +15,7 @@ import java.util.ArrayList;
 public class PalindromePartition {
 
     public static void main(String[] args) {
-        System.out.println(partition("aabb"));
+        System.out.println(partition("aab"));
     }
 
     public static ArrayList<ArrayList<String>> partition(String s) {
@@ -46,7 +46,8 @@ public class PalindromePartition {
             if (isPalindrome(str)) {
                 partition.add(str);
                 addPalindrome(s, i, partition, result);
-                partition.remove(partition.size() - 1);
+                partition.remove(partition.size() - 1); // why?
+
             }
         }
     }

@@ -112,6 +112,7 @@ public class BinaryTreeToDoublyLinkedList {
             tree.root.left = new DNode(12);
             tree.root.right = new DNode(15);
             tree.root.left.left = new DNode(25);
+            tree.root.left.left.right = new DNode(26);
             tree.root.left.right = new DNode(30);
             tree.root.right.left = new DNode(36);
 

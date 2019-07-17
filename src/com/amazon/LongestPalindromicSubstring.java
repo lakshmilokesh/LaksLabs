@@ -14,7 +14,7 @@ package com.amazon;
 public class LongestPalindromicSubstring {
 
     public static void main(String[] args) {
-        System.out.println("Palindromic Substring =>  " + longestPalindromedp("bb"));
+        System.out.println("Palindromic Substring =>  " + longestPalindromedp("babad"));
     }
 
     /*
@@ -61,7 +61,6 @@ public class LongestPalindromicSubstring {
             int temp  = hi -lo -1;
             if(temp > maxLen) {
                 maxLen = temp;
-
                 start = lo+1;
             }
 

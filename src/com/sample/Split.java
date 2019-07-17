@@ -10,8 +10,8 @@ public class Split {
 		}*/
 
 		// Checking increment and decrement operators
-		int i = 1;
-		int j = 1;
+		int i = 0;
+		int j = 0;
 		Integer[] arr = new Integer[]{0,1,9};
 		System.out.println(arr[i++]);
 		System.out.println(i);

@@ -35,6 +35,8 @@ public class BackspaceStringCompare {
     }
 
     public static boolean backspaceCompare(String S, String T) {
+        System.out.println(build(S));
+        System.out.println(build(T));
         return build(S).equals(build(T));
     }
 //    Complexity Analysis

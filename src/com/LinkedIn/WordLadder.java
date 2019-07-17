@@ -1,4 +1,4 @@
-package com.amazon;
+package com.LinkedIn;
 
 /*
  * Given two words (beginWord and endWord), and a dictionary's word list, find the length of shortest transformation

@@ -27,7 +27,7 @@ public class MissingRanges {
         List<String> res = new ArrayList<String>();
 
         // the next number we need to find
-        int next = lo;
+            int next = lo;
 
         for (int i = 0; i < a.length; i++) {
             // not within the range yet

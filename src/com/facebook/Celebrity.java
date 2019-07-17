@@ -33,7 +33,7 @@ public class Celebrity {
         }
 
         // Step 2: Validate the candidate
-        int candidate = right;
+        int candidate = left;
         for (int i = 0; i < n; i++) {
             if (i != candidate && (!knows(i, candidate) || knows(candidate, i))) {
                 return -1;

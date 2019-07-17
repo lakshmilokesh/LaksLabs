@@ -34,6 +34,7 @@ public class SortingLogFile {
 
         String[] s1 = new String[] {"bbb","abc","tre","wwe","ff"};
         String[] s2 = new String[] {"red","67","98","44","678"};
+        String[] s6 = new String[] {"red","69","98","44","678"};
         String[] s3 = new String[] {"gfd","abc","rrr","iuy","oo"};
         String[] s4 = new String[] {"hju","11","984","99","87"};
         String[] s5 = new String[] {"aaa","abc","tre","wwe","ff"};
@@ -43,6 +44,7 @@ public class SortingLogFile {
         inputList.add(s3);
         inputList.add(s4);
         inputList.add(s5);
+        inputList.add(s6);
 
         List<Log> logList = convertToLog(inputList);
 

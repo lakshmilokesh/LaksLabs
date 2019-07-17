@@ -1,4 +1,4 @@
-package com.amazon;
+package com.LinkedIn;
 
 import java.util.HashMap;
 import java.util.Map;

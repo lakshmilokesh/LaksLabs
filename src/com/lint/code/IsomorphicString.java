@@ -26,13 +26,13 @@ public class IsomorphicString {
 		// TODO Auto-generated method stub
 		String s = "ab";
 		String t = "aa";
-		System.out.println("isIsomorphic->" + isIsomorphic(s, t));
+		System.out.println("isIsomorphic->" + isIsomorphicString(s, t));
 
 	}
 
 	//Better approach
 
-	public boolean isIsomorphicString (String s, String t) {
+	public static boolean isIsomorphicString (String s, String t) {
 		int[] m1 = new int[256];
 		int[] m2 = new int[256];
 		int n = s.length();

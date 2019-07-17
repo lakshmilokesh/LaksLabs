@@ -19,7 +19,7 @@ import com.linked.list.DNode;
  *
  * Created by Laks on 1/11/16.
  *
- * AMAZON / SERVICE NOW / FB /YAHOO
+ * AMAZON / SERVICE NOW / FB /YAHOO / PAY PAL/ GOOGLE
  *
  */
 public class LRUCache {

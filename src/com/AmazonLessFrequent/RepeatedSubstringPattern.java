@@ -7,7 +7,10 @@ public class RepeatedSubstringPattern {
 //    If i is a divisor of length, repeat the substring from 0 to i the number of times i is contained in s.length
 //    If the repeated substring is equals to the input str return true
 
-    public boolean repeatedSubstringPattern(String str) {
+    public static void main(String[] args) {
+        System.out.println(repeatedSubstringPattern("abcabcabc"));
+    }
+    public static boolean repeatedSubstringPattern(String str) {
         int l = str.length();
         for(int i=l/2;i>=1;i--) {
             if(l%i==0) {

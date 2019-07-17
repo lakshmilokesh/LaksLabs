@@ -42,8 +42,8 @@ public class PaintFence {
         int[] same = new int[n];
         // diff[i] means the ith post has a different color with the (i-1)th post.
         int[] diff = new int[n];
-        same[0] = same[1] = k;
-        diff[0] = k;
+        same[0] = same[1] = k; //(2 posts)
+        diff[0] = k * 1;
         diff[1] = k * (k - 1);
         for (int i = 2; i < n; ++i) {
             // the i-th in same should be equal the previous one in diff since only two consectutive

@@ -1,4 +1,4 @@
-package com.leet.code;
+package com.LinkedIn;
 
 /*
  * You are a professional robber planning to rob houses along a street. Each house has a

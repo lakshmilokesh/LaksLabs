@@ -1,4 +1,4 @@
-package com.InterviewQuestions;
+package com.LinkedIn;
 
 /**
  * Created by Laks on 2/18/16.

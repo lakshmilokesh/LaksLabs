@@ -42,7 +42,8 @@ public class SortTransformedArray {
 //
 //            2.a<0, center is bigger than two ends.
 //
-//    so use two pointers i, j and do a merge-sort like process. depending on sign of a, you may want to start from the beginning or end of the transformed array. For a==0 case, it does not matter what b's sign is.
+//    so use two pointers i, j and do a merge-sort like process. depending on sign of a, you may want to start from the
+// beginning or end of the transformed array. For a==0 case, it does not matter what b's sign is.
 //    The function is monotonically increasing or decreasing. you can start with either beginning or end.
 
     public static int[] sortTransformedArray(int[] nums, int a, int b, int c) {

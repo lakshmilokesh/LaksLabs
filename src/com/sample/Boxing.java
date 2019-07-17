@@ -19,15 +19,15 @@ public class Boxing {
 
 	private static void box(int i) {
 		// TODO Auto-generated method stub
-		System.out.println("Inside Called method : Before Increment : "+i);
+		System.out.println("Inside Called method int: Before Increment : "+i);
 		i++;
-		System.out.println("Inside Called method : After Increment : " + i);
+		System.out.println("Inside Called method int : After Increment : " + i);
 	}
 	private static void box2(Integer j) {
 		// TODO Auto-generated method stub
-		System.out.println("Inside Called method : Before Increment : "+j);
+		System.out.println("Inside Called method Integer: Before Increment : "+j);
 		j++;
-		System.out.println("Inside Called method : After Increment : " + j);
+		System.out.println("Inside Called method Integer : After Increment : " + j);
 	}
 
 }

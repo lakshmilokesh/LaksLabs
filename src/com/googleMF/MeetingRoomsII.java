@@ -22,15 +22,16 @@ import java.util.PriorityQueue;
 public class MeetingRoomsII {
 
     public static void main(String[] args) {
-//        Interval i1 = new Interval(0,30);
-//        Interval i2 = new Interval(5,10);
-//        Interval i3 = new Interval(15,20);
-//        Interval[] interval = new Interval[]{i1,i2,i3};
 
-        Interval i2 = new Interval(7,10);
-        Interval i3 = new Interval(2,4);
-        Interval[] interval = new Interval[]{i2,i3};
-        System.out.println(minMeetingRooms(interval));
+        Interval i1 = new Interval(0,30);
+        Interval i2 = new Interval(5,10);
+        Interval i3 = new Interval(15,20);
+        Interval[] interval = new Interval[]{i1,i2,i3};
+
+//        Interval i2 = new Interval(7,10);
+//        Interval i3 = new Interval(2,4);
+//        Interval[] interval = new Interval[]{i2,i3};
+        System.out.println(minMeetingRooms2(interval));
     }
 
     public static class Interval {
@@ -63,7 +64,7 @@ public class MeetingRoomsII {
     }
 
     //Makes more sense
-    public int minMeetingRooms2(Interval[] intervals) {
+    public static int minMeetingRooms2(Interval[] intervals) {
         if(intervals==null||intervals.length==0)
             return 0;
 
@@ -74,7 +75,7 @@ public class MeetingRoomsII {
         });
 
         PriorityQueue<Integer> queue = new PriorityQueue<Integer>();
-        int count=1;
+        int count=1; // minimum conference rooms required
         queue.offer(intervals[0].end);
 
         for(int i=1; i<intervals.length; i++){

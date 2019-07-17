@@ -7,10 +7,16 @@ package com.amazon;
  */
 public class SetMatrixZeroes {
 
-	static int[][] matrix = {{0,0,0,5},{4,3,1,4},{0,1,1,4},{1,2,1,3},{0,0,1,1}};
+	static int[][] matrix = {{0,0,0,5},{4,3,1,4},{0,1,1,4},{1,2,1,3}};
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		setZeroes(matrix);
+		for (int i = 0; i <  matrix.length; i++) {
+			for (int j = 0;j < matrix[0].length; j++) {
+				System.out.print(matrix[i][j] + " ");
+			}
+			System.out.println();
+		}
 	}
 
 	public static void setZeroes(int[][] matrix) {

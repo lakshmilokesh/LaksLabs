@@ -23,5 +23,50 @@ package com.GoogleLessFrequent;
  *
  */
 
+import com.binarytree.TreeNode;
+
+import java.util.Map;
+
 public class LongestUnivaluePath {
+    private static int maxLength = 0;
+    public static void main(String[] args) {
+
+//        TreeNode root = new TreeNode(1);
+//        root.left = new TreeNode(4);
+//        root.right = new TreeNode(5);
+//        root.left.left = new TreeNode(4);
+//        root.left.right = new TreeNode(4);
+//        root.right.right = new TreeNode(5);
+
+        TreeNode root = new TreeNode(5);
+        root.left = new TreeNode(4);
+        root.right = new TreeNode(5);
+        root.left.left = new TreeNode(1);
+        root.left.right = new TreeNode(1);
+        root.right.right = new TreeNode(5);
+
+        System.out.println(longestUnivaluePath(root));
+
+    }
+
+    static int ans;
+    public static int longestUnivaluePath(TreeNode root) {
+        ans = 0;
+        arrowLength(root);
+        return ans;
+    }
+    public static int arrowLength(TreeNode node) {
+        if (node == null) return 0;
+        int left = arrowLength(node.left);
+        int right = arrowLength(node.right);
+        int arrowLeft = 0, arrowRight = 0;
+        if (node.left != null && node.left.val == node.val) {
+            arrowLeft += left + 1;
+        }
+        if (node.right != null && node.right.val == node.val) {
+            arrowRight += right + 1;
+        }
+        ans = Math.max(ans, arrowLeft + arrowRight);
+        return Math.max(arrowLeft, arrowRight);
+    }
 }

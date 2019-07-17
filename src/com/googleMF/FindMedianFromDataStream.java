@@ -5,8 +5,8 @@ import java.util.PriorityQueue;
 
 public class FindMedianFromDataStream {
 
-    PriorityQueue<Integer> maxHeap;//lower half
-    PriorityQueue<Integer> minHeap;//higher half
+    static PriorityQueue<Integer> maxHeap = new PriorityQueue<Integer>(Collections.reverseOrder());//lower half
+    static PriorityQueue<Integer> minHeap = new PriorityQueue<Integer>();//higher half
 
     public FindMedianFromDataStream(){
         maxHeap = new PriorityQueue<Integer>(Collections.reverseOrder());
@@ -14,7 +14,7 @@ public class FindMedianFromDataStream {
     }
 
     // Adds a number into the data structure.
-    public void addNum(int num) {
+    public static void addNum(int num) {
         maxHeap.offer(num);
         minHeap.offer(maxHeap.poll());
 
@@ -24,11 +24,21 @@ public class FindMedianFromDataStream {
     }
 
     // Returns the median of current data stream
-    public double findMedian() {
+    public static double findMedian() {
         if(maxHeap.size()==minHeap.size()){
             return (double)(maxHeap.peek()+(minHeap.peek()))/2;
         }else{
             return maxHeap.peek();
         }
+    }
+
+    public static void main(String[] args) {
+
+        addNum(3);
+        addNum(2);
+        addNum(6);
+        addNum(8);
+        addNum(9);
+        System.out.println(findMedian());
     }
 }

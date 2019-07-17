@@ -20,7 +20,7 @@ import java.util.Stack;
 public class Calculator {
 
     public static void main(String[] args) {
-        System.out.println("Output : " + calculate("1+1"));
+        System.out.println("Output : " + calculate("(1+(4+5+2)-3)+(6+8)"));
 
     }
 
@@ -62,7 +62,7 @@ public class Calculator {
                 i++;
             } else if (s.charAt(i) == ')') {
                 String str = stack.pop();
-                stack.pop(); //check this - not required
+                stack.pop(); //this removes "(" that is in the stack
                 i++;
                 pushOrAddOrMinus(str, stack);
             } else if (s.charAt(i) == ' ') {

@@ -31,7 +31,7 @@ public class LongestWordDictionaryDeleting {
 
 // Complexity Analysis
 //
-// Time complexity : O(n*x*logn + n*x)O(n∗x∗logn+n∗x). Here nn refers to the number of strings in list dd and xx
+// Time complexity : O(n*x*logn + n*x). Here nn refers to the number of strings in list d and x
 // refers to average string length. Sorting takes O(nlogn)O(nlogn) and isSubsequence takes O(x)O(x) to check whether a
 // string is a subsequence of another string or not.
 //
@@ -44,6 +44,7 @@ public class LongestWordDictionaryDeleting {
                 j++;
         return j == x.length();
     }
+
     public String findLongestWordSorting(String s, List< String > d) {
         Collections.sort(d, new Comparator< String >() {
             public int compare(String s1, String s2) {
@@ -51,6 +52,7 @@ public class LongestWordDictionaryDeleting {
             }
         });
         for (String str: d) {
+            System.out.println("str" + str);
             if (isSubsequence(str, s))
                 return str;
         }
@@ -60,9 +62,10 @@ public class LongestWordDictionaryDeleting {
 
 //    Complexity Analysis
 //
-//    Time complexity : O(n*x)O(n∗x). One iteration over all strings is required. Here nn refers to the number of strings in list dd and xx refers to average string length.
+//    Time complexity : O(n*x). One iteration over all strings is required. Here n refers to the number of strings
+// in list d and xx refers to average string length.
 //
-//    Space complexity : O(x)O(x). max\_strmax_str variable is used.
+//    Space complexity : O(x). max\_strmax_str variable is used.
 
     public String findLongestWord(String s, List < String > d) {
         String max_str = "";

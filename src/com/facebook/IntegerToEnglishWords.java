@@ -12,7 +12,7 @@ package com.facebook;
 public class IntegerToEnglishWords {
 
     public static void main(String[] args) {
-        System.out.println(numberToWords(1234567));
+        System.out.println(numberToWords(1000));
     }
 
     private static final String[] LESS_THAN_20 = {"", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"};

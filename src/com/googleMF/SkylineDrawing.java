@@ -96,7 +96,7 @@ public class SkylineDrawing {
             //if height changes from previous height then this building x becomes critcal x.
             // So add it to the result.
             if (prevMaxHeight != currentMaxHeight) {
-                result.add(new int[]{buildingPoint.x, currentMaxHeight});
+                    result.add(new int[]{buildingPoint.x, currentMaxHeight});
                 prevMaxHeight = currentMaxHeight;
             }
         }

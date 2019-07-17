@@ -38,5 +38,9 @@ public class IslandPerimeter {
         return islands * 4 - neighbours * 2;
     }
 
+    // Solution :   every adjacent islands made two sides disappeared(as picture below).
+    // +--+     +--+                   +--+--+
+    // |  |  +  |  |          ->       |     |
+    // +--+     +--+                   +--+--+
 
 }

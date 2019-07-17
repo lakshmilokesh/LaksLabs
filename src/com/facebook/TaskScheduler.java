@@ -28,7 +28,7 @@ public class TaskScheduler {
 
     public static void main(String[] args) {
 
-        char[] tasks = new char[] {'A','B','A','A','B','B'};
+        char[] tasks = new char[] {'A','B','A','A','B','B','A'};
         System.out.println(leastInterval(tasks,2));
     }
 

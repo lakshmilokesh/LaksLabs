@@ -22,10 +22,10 @@ public class SeparateChaining {
         private Object value;
         private Node next;
 
-        public Node(Object key, Object value, Node node) {
+        public Node(Object key, Object value) {
             this.key = key;
             this.value = value;
-            this.next = node; //doubtful about this
+            this.next = null; //doubtful about this
         }
     }
 
@@ -41,13 +41,14 @@ public class SeparateChaining {
 
     public void put (Object key, Object value) {
         int i = hash(key);
-        for (Node x = st[i]; x != null; x = x.next) {
+        Node x = st[i];
+        for (; x != null; x = x.next) {
             if (key.equals(x.key)) {
                 x.value = value;
                 return;
             }
         }
-        st[i] = new Node(key,value,st[i]);
+        x.next = new Node(key,value); // inserting at the lasts
     }
 
     private int hash(Object key) {

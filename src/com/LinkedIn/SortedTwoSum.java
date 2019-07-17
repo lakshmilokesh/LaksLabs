@@ -1,4 +1,4 @@
-package com.amazon;
+package com.LinkedIn;
 
 /*
  * Given an array of integers (SORTED), find two numbers such that they add up to a specific target number.

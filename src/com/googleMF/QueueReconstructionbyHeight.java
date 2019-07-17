@@ -35,7 +35,7 @@ public class QueueReconstructionbyHeight {
 
     public static int[][] reconstructQueue(int[][] people) {
 
-        //Sort based on height
+        //Sort based on height desc
         Arrays.sort(people,new Comparator<int[]>(){
             public int compare(int[] p1, int[] p2){
                 return p1[0]!=p2[0]?Integer.compare(p2[0],p1[0]): Integer.compare(p1[1],p2[1]);

@@ -15,7 +15,7 @@ public class BlockingQueue {
 	}   
 	
 	public synchronized void enqueue(Integer i) throws InterruptedException {
-		while(this.queue.size() ==this.limit) {
+		while(this.queue.size() == this.limit) {
 			wait();
 		}
 		if (this.queue.size() == 0) {

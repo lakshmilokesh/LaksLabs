@@ -11,7 +11,7 @@ import java.io.InputStreamReader;
 public class RepeatedNumber {
 
     public static void main(String args[]) {
-        int[] a= new int[]{1,2,3,5,3,5,3,4};
+        int[] a= new int[]{1,2,3,5,3,3,3,4};
         int num = findNumber(a);
         System.out.println(num);
 

@@ -74,7 +74,7 @@ public class WallsandGates {
                 if (r < 0 || c < 0 || r >= m || c >= n || rooms[r][c] != EMPTY) {
                     continue;
                 }
-                rooms[r][c] = rooms[row][col] + 1;
+                    rooms[r][c] = rooms[row][col] + 1;
                 q.add(new int[] { r, c });
             }
         }

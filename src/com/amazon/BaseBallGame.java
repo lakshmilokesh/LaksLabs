@@ -35,7 +35,12 @@ import java.util.Stack;
 
 public class BaseBallGame {
 
-    public int calPoints(String[] ops) {
+    public static void main(String[] args) {
+        String[] s = new String[]{"5","2","C","D","+"};
+        System.out.println(calPoints(s));
+    }
+
+    public static int calPoints(String[] ops) {
         Stack<Integer> stack = new Stack();
 
         for(String op : ops) {

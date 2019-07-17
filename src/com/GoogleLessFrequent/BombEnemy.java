@@ -45,7 +45,7 @@ public class BombEnemy {
                     rowHits = 0;
                     // reset rowHits when hit wall, re calculate enemy after
                     for (int k = j; k < n && grid[i][k] != 'W'; k++) {
-                        rowHits += grid[i][k] == 'E' ? 1 : 0;;
+                        rowHits += grid[i][k] == 'E' ? 1 : 0;
                     }
                 }
                 if (i == 0 || grid[i - 1][j] == 'W') {

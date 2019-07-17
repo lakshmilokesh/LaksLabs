@@ -39,6 +39,9 @@ public class KClosestElements {
             return arr.subList(n - k, n);
         } else {
             int index = Collections.binarySearch(arr, x);
+            // if x is not present. x would have been inserted
+            // at position index. So the function returns (-index-1)
+            // which is -index.
             if (index < 0)
                 index = -index - 1;
             int low = Math.max(0, index - k - 1), high = Math.min(arr.size() - 1, index + k - 1);

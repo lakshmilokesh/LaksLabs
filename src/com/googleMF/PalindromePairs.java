@@ -25,7 +25,7 @@ public class PalindromePairs {
 
     public static void main(String[] args) {
 
-        String[] words = new String[]{"bat", "tab", "cat"};
+        String[] words = new String[]{"abcd", "dcba", "lls", "s", "sssll"};
         palindromePairs(words);
 
     }

@@ -21,11 +21,17 @@ public class WordBreak {
 //        a.add("leet");
 //        a.add("code");
 //        System.out.println(wordBreak("leetcode",a));
-        a.add("a");
-        a.add("aa");
-        a.add("aaa");
+//        a.add("a");
+//        a.add("aa");
+//        a.add("aaa");
 
-        System.out.println(wordBreak("aaaaaa",a));
+        a.add("cats");
+        a.add("dog");
+        a.add("sand");
+        a.add("and");
+        a.add("cat");
+
+        System.out.println(wordBreak("catsandog",a));
     }
     public static boolean wordBreak(String s, List<String> wordDict) {
             Set<String> wordDictSet=new HashSet(wordDict);

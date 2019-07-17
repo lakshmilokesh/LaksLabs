@@ -34,7 +34,7 @@ public class SortCharactersByFrequency {
 
     public static void main(String[] args) {
 
-        System.out.println(frequencySort("cacaca"));
+        System.out.println(frequencySort("tree"));
 
     }
     public static String frequencySort(String s) {

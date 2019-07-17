@@ -21,6 +21,8 @@ public class VersionComparison {
 		System.out.println("Version comparision result" + compareVersions(v1, v2));
 
 	}
+
+	//Better approach
 	public static int compareVersions(String version1, String version2)
 	{
 		String[] levels1 = version1.split("\\.");
@@ -37,6 +39,8 @@ public class VersionComparison {
 		}
     	return 0;
     }
+
+
 	public static int compareVersion(String version1, String version2) {
 		String[] v1 = version1.split("\\.");
 		String[] v2 = version2.split("\\.");

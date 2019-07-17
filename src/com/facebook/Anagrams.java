@@ -24,11 +24,12 @@ public class Anagrams {
             char[] array = elem.toCharArray();
             Arrays.sort(array);
             String target = new String(array);
-            if (dict.contains(target)) {
-                return true;
-            } else {
+            if (!dict.contains(target)) {
                 dict.add(target);
             }
+        }
+        if (dict.size() == 1) {
+            return true;
         }
         return false;
     }

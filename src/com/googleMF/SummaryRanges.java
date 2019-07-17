@@ -16,7 +16,7 @@ import java.util.ArrayList;
  * Created by Laks on 2/3/16.
  *
  */
-public class SummaryRanges {
+public class    SummaryRanges {
     public static void main(String[] args) {
         int[] arr = new int[]{0,2,3,4,6,8,9};
         System.out.println("Ranges");

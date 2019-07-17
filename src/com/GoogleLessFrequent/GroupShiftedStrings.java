@@ -27,7 +27,7 @@ public class GroupShiftedStrings {
 
     public static void main(String[] args) {
 
-        String[] strings = new String[]{"abc", "bcd", "acef", "xyz", "az", "ba", "a", "z"};
+        String[] strings = new String[]{"za","abc", "bcd", "acef", "xyz", "az", "ba", "a", "z"};
         List<List<String>> result = groupStrings(strings);
     }
 

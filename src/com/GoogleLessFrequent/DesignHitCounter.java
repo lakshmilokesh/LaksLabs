@@ -40,8 +40,8 @@ public class DesignHitCounter {
     private static int[] hits;
     /** Initialize your data structure here. */
     public DesignHitCounter() {
-        times = new int[300];
-        hits = new int[300];
+        times = new int[5];
+        hits = new int[5];
     }
 
     public static void main(String[] args) {
@@ -60,19 +60,19 @@ public class DesignHitCounter {
         counter.getHits(4);
 
 // hit at timestamp 300.
-        counter.hit(300);
+        counter.hit(5);
 
 // get hits at timestamp 300, should return 4.
-        counter.getHits(300);
+        counter.getHits(5);
 
 // get hits at timestamp 301, should return 3.
-        counter.getHits(301);
+        counter.getHits(6);
     }
 
     /** Record a hit.
      @param timestamp - The current timestamp (in seconds granularity). */
     public static void hit(int timestamp) {
-        int index = timestamp % 300;
+        int index = timestamp % 5;
         if (times[index] != timestamp) {
             times[index] = timestamp;
             hits[index] = 1;
@@ -85,8 +85,8 @@ public class DesignHitCounter {
      @param timestamp - The current timestamp (in seconds granularity). */
     public static int getHits(int timestamp) {
         int total = 0;
-        for (int i = 0; i < 300; i++) {
-            if (timestamp - times[i] < 300) {
+        for (int i = 0; i < 5; i++) {
+            if (timestamp - times[i] < 5) {
                 total += hits[i];
             }
         }

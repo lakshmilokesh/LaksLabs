@@ -14,6 +14,7 @@ public class Heap {
 
     static int[] pq = new int[10];
     static int n = pq.length;
+
     /*
      * Promotion in a Heap : Child's key is larger than parents key.
      * Exchange child and parent key

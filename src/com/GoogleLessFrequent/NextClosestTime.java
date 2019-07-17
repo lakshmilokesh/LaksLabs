@@ -31,7 +31,7 @@ import java.util.Set;
 public class NextClosestTime {
 
     public static void main(String args[]) {
-        nextClosestTime("19:34");
+        System.out.println(nextClosestTime("19:34"));
     }
 
     /*
@@ -89,7 +89,7 @@ public class NextClosestTime {
      * If no such digit exists in digits[], return the minimum one i.e. digits[0]
      * @param current the current digit
      * @param upperLimit the maximum possible value for current digit
-     * @param digits[] the sorted digits array
+     * @param digits the sorted digits array
      * @return
      */
     private static char findNext(char current, char upperLimit, char[] digits) {
@@ -103,4 +103,5 @@ public class NextClosestTime {
         }
         return pos == 4 ? digits[0] : digits[pos];
     }
+
 }

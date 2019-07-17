@@ -18,6 +18,9 @@ public class WiggleSort {
     public static void main(String[] args) {
         int[] nums = new int[]{3,5,2,1,6,4};
         wiggleSort2(nums);
+        for (int i : nums) {
+            System.out.println(i);
+        }
     }
 
 //    Complexity analysis

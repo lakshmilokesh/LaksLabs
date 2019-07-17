@@ -1,4 +1,4 @@
-package com.googleMF;
+package com.LinkedIn;
 
 /*
  * Implement pow(x, n), which calculates x raised to the power n (xn).
@@ -31,7 +31,7 @@ package com.googleMF;
 public class Pow {
 
     public static void main(String[] args) {
-        System.out.println(myPow(2.000,6));
+        System.out.println(myPow(2.000,3));
     }
 
     public static double myPow(double x, int n) {

@@ -23,9 +23,9 @@ public class SelectionSort {
 				}
 			}
 			exch(a,min,i);
+
 		}
 	}
-
 	private static void exch(int[] a, int min, int i) {
 		// TODO Auto-generated method stub
 		int temp = a[min];

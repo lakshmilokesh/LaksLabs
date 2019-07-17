@@ -28,6 +28,9 @@ public class FindPeakElement {
 
     public static void main(String[] args) {
 
+        int[] a = new int[]{9,8,7,6,5,4,3,2};
+        System.out.println(searchRecursive(a,0,a.length-1));
+
     }
 
 //    Complexity Analysis
@@ -49,7 +52,7 @@ public class FindPeakElement {
 //    Space complexity : O(logn) We reduce the search space in half at every step. Thus, the total search space will be
 //    consumed in log n steps. Thus, the depth of recursion tree will go upto log_2(n)
 
-    public int searchRecursive(int[] nums, int l, int r) {
+    public static int searchRecursive(int[] nums, int l, int r) {
         if (l == r)
             return l;
         int mid = (l + r) / 2;
@@ -65,7 +68,7 @@ public class FindPeakElement {
 //
 //    Space complexity : O(1). Constant extra space is used.
 
-    public int findPeakElementIterative(int[] nums) {
+    public static int findPeakElementIterative(int[] nums) {
         int l = 0, r = nums.length - 1;
         while (l < r) {
             int mid = (l + r) / 2;
@@ -76,4 +79,6 @@ public class FindPeakElement {
         }
         return l;
     }
+
+
 }

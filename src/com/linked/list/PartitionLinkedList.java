@@ -26,72 +26,26 @@ public class PartitionLinkedList extends LinkedList {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String str = br.readLine();
 
-		partition(head, Integer.parseInt(str));
+		//partition(head, Integer.parseInt(str));
 	}
 
-	private static void partition (Node head, int x) {
-		
-		Node current = head;
-
-		while (current != null) {
-
-			if (Integer.parseInt(current.data) < x) {
-				Lefthead = add(Lefthead,current);
+	public static ListNode partition(ListNode head, int x) {
+		ListNode dummy1 = new ListNode(0,null), dummy2 = new ListNode(0,null);  //dummy heads of the 1st and 2nd queues
+		ListNode curr1 = dummy1, curr2 = dummy2;      //current tails of the two queues;
+		while (head!=null){
+			if (head.data<x) {
+				curr1.next = head;
+				curr1 = curr1.next;
+			}else {
+				curr2.next = head;
+				curr2 = curr2.next;
 			}
-			else if (Integer.parseInt(current.data) > x) {
-				rightHead = add(rightHead,current);
-			}
-			else if(Integer.parseInt(current.data) == x){
-				xNode = current;
-			}
-			current = current.next;
+			head = head.next;
 		}
-		
-		Node mergedNode = mergeLinkedList();
-		displayValues(mergedNode);
+		curr2.next = null;          //important! avoid cycle in linked list. otherwise u will get TLE.
+		curr1.next = dummy2.next;
+		return dummy1.next;
 
-	}
-	private static Node mergeLinkedList() {
-		
-		// TODO Auto-generated method stub
-		Node traverse = Lefthead;
-		if (traverse != null) {
-			while (traverse.next != null) {
-				traverse = traverse.next;
-			}
-			if (xNode != null) {
-				Node newNode = new LinkedList().new Node(xNode.data,null);
-				traverse.next = newNode;
-				newNode.next = rightHead;
-			}
-			else {
-				traverse.next = rightHead;
-			}
-			return Lefthead;
-		}
-		else {
-			if(xNode != null) {
-				Node newNode = new LinkedList().new Node(xNode.data,null);
-				newNode.next = rightHead;
-				return newNode;
-			}
-		}
-		return rightHead;
-
-	}
-
-	private static Node add(Node h, Node n) {
-		Node current = h;
-		Node newNode = new LinkedList().new Node(n.data,null);
-		if (h == null) {
-			h = newNode;
-			return h;
-		}
-		while (current.next != null) {
-			current = current.next;
-		}
-		current.next = newNode;	
-		return h;
 	}
 
 
