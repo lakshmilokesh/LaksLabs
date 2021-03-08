@@ -15,7 +15,7 @@ import java.util.Set;
  *
  *
  */
-public class LongestConsecutiveSequence {
+public class  LongestConsecutiveSequence {
 
     public static void main(String[] args) {
 

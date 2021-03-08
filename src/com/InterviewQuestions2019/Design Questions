@@ -1,0 +1,17 @@
+
+1. Google 2020
+
+    Design Online Car rental system - DB model
+    Online shopping (system integration - login/cart etc etc)
+
+2. Google 2018
+
+    Order Management System
+    Company acquired (integrate 2 application that does the same )(System Integration)
+
+3. Uber Freight 2020
+
+    Design Notification service. Different components send different events and each event can trigger either email,
+    text or any other type of notification
+
+4.

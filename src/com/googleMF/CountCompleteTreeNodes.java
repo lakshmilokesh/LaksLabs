@@ -23,7 +23,7 @@ Output: 6
 
  * Complexity Analysis
 
-Time complexity : \mathcal{O}(N)O(N).
+Time complexity : O(N).
 Space complexity : \mathcal{O}(d) = \mathcal{O}(\log N)O(d)=O(logN) to keep the recursion stack, where d is a tree depth.
 
  *

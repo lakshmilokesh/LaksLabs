@@ -16,7 +16,7 @@ package com.googleMF;
 
 import java.util.Stack;
 
-public class DailyTemperatures {
+public class                                                           DailyTemperatures {
 
 //    Complexity Analysis
 //
