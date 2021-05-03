@@ -18,35 +18,27 @@ import java.util.List;
 public class RemoveInvalidParanthesis {
 
     public static void main(String[] args) {
-        System.out.println(removeInvalidParentheses("())"));
+        System.out.println(minRemoveToMakeValid("())"));
     }
-
-    public static List<String> removeInvalidParentheses(String s) {
-        List<String> ans = new ArrayList<>();
-        remove(s, ans, 0, 0, new char[]{'(', ')'});
-        return ans;
+    
+    private StringBuilder removeInvalidClosing(CharSequence string, char open, char close) {
+        StringBuilder sb = new StringBuilder();
+        int balance = 0;
+        for (int i = 0; i < string.length(); i++) {
+            char c = string.charAt(i);
+            if (c == open) {
+                balance++;
+            } if (c == close) {
+                if (balance == 0) continue; // balance zero indicates that its balanced already, so ignore the ')' you encounter now
+                balance--;
+            }
+            sb.append(c);
+        }  
+        return sb;
     }
-
-    public static void remove(String s, List<String> ans, int last_i, int last_j,  char[] par) {
-
-        // Search for mismatch
-        for (int stack = 0, i = last_i; i < s.length(); ++i) {
-            if (s.charAt(i) == par[0]) stack++;
-            if (s.charAt(i) == par[1]) stack--;
-
-            // Remove a parenthesis
-            if (stack >= 0) continue;
-            for (int j = last_j; j <= i; ++j)
-                if (s.charAt(j) == par[1] && (j == last_j || s.charAt(j - 1) != par[1])) // if its the first one that is  ')'
-                    remove(s.substring(0, j) + s.substring(j + 1, s.length()), ans, i, j, par);
-            return;
-        }
-
-        // If no mismatch, try reverse the string
-        String reversed = new StringBuilder(s).reverse().toString();
-        if (par[0] == '(') // finished left to right
-            remove(reversed, ans, 0, 0, new char[]{')', '('});
-        else // finished right to left
-            ans.add(reversed);
+    public String minRemoveToMakeValid(String s) {
+        StringBuilder result = removeInvalidClosing(s, '(', ')');
+        result = removeInvalidClosing(result.reverse(), ')', '(');
+        return result.reverse().toString();
     }
 }
