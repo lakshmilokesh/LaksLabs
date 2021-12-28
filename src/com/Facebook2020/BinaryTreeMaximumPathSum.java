@@ -1,5 +1,9 @@
 package com.Facebook2020;
 
+/* The time complexity of the below solution is O(n), where n is the total number of nodes in the binary
+ * tree. The auxiliary space required by the program is O(h) for the call stack, where h is the height 
+ * of the tree.
+ */
 public class BinaryTreeMaximumPathSum {
   
     int res = Integer.MIN_VALUE;
