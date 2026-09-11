@@ -1,5 +1,7 @@
 package com.sorting;
-
+/*
+ * make the first index as minimum and find the smallest number in the remaining array and swap with the number
+ */
 public class SelectionSort {
 
 	public static void main(String[] args) {
