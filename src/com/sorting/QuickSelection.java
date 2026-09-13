@@ -6,6 +6,7 @@ import com.sorting.QuickSort;
  * Created by Laks on 1/6/16.
  *
  * Goal : Find the kth largest element
+ * O(n) on average and O(n²) in the worst case
  */
 public class QuickSelection {
 
