@@ -1,6 +1,8 @@
 package com.sorting;
 /*
- * make the first index as minimum and find the smallest number in the remaining array and swap with the number
+ * In iteration i, find the minimum index min smallest of the remaining array
+ * Swap a[i] and a[min]
+ * inplace sorting. O(N2). N EXCHANGES
  */
 public class SelectionSort {
 
