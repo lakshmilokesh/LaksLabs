@@ -1,5 +1,13 @@
 package com.sorting;
 
+/*
+ * For interation i, Swap a[i] with each larger entry to its left
+ * Worst-Case Time Complexity: O(n²)
+ * Average-Case Time Complexity: O(n²)
+ * Best-Case Time Complexity: O(n)
+ * Space o(1)
+ */
+
 public class InsertionSort {
 
 	public static void main(String[] args) {
