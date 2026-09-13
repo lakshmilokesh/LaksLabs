@@ -1,7 +1,8 @@
 package com.Facebook2020;
 
 /**
- * Created by Laks on 1/6/16.
+ * Divide aaray into 2 halves. recursu=ively sort each half and merge the array
+ * O(n lg n)
  */
 public class MergeSort {
 
